@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ninx-demo
+spec:
+  rules:
+    - host: minikube.116.203.44.29.nip.io
+      http:
+        paths:
+          - backend:
+             serviceName: nginx-demo
+             servicePort: 80
